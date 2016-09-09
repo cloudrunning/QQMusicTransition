@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hS-4h-Gjq">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mojiezuo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dad-2w-cgU">
+                                        <rect key="frame" x="20" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="J0Z-X2-Iqv"/>
+                                            <constraint firstAttribute="height" constant="44" id="g6Z-Q9-cp2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Dad-2w-cgU" firstAttribute="top" secondItem="9hS-4h-Gjq" secondAttribute="top" constant="8" id="3Rw-aS-be8"/>
+                                    <constraint firstItem="Dad-2w-cgU" firstAttribute="leading" secondItem="9hS-4h-Gjq" secondAttribute="leading" constant="20" id="IcX-JZ-LF8"/>
+                                    <constraint firstAttribute="height" constant="60" id="mmx-MS-LEa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL0-4b-Gre">
+                                <rect key="frame" x="111" y="367" width="37" height="30"/>
+                                <state key="normal" title="show"/>
+                                <connections>
+                                    <segue destination="F6K-zA-AD0" kind="show" identifier="MusicDetailController" id="wdd-38-hNH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9hS-4h-Gjq" secondAttribute="bottom" id="0sa-P2-gxB"/>
+                            <constraint firstItem="9hS-4h-Gjq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BzS-34-Qbe"/>
+                            <constraint firstAttribute="trailing" secondItem="9hS-4h-Gjq" secondAttribute="trailing" id="v4Z-xu-B5e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="musicContentView" destination="9hS-4h-Gjq" id="7PQ-Eh-kYP"/>
+                        <outlet property="singerImageView" destination="Dad-2w-cgU" id="7UC-QT-KVW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Music Detail Controller-->
+        <scene sceneID="mjY-ad-e6J">
+            <objects>
+                <viewController id="F6K-zA-AD0" customClass="QQMusicDetailController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hc5-TN-AmZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="XXQ-fa-VDi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bnh-LW-agE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mojiezuo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MUE-Ts-xtj">
+                                <rect key="frame" x="220" y="220" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Se7-Hm-99f"/>
+                                    <constraint firstAttribute="height" constant="160" id="a0I-0a-RyR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMK-Ei-07K">
+                                <rect key="frame" x="251" y="453" width="52" height="30"/>
+                                <state key="normal" title="dismiss"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="F6K-zA-AD0" eventType="touchUpInside" id="hsq-Xp-1Gk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MUE-Ts-xtj" firstAttribute="centerY" secondItem="bnh-LW-agE" secondAttribute="centerY" id="EpZ-7C-UGz"/>
+                            <constraint firstItem="MUE-Ts-xtj" firstAttribute="centerX" secondItem="bnh-LW-agE" secondAttribute="centerX" id="oda-xc-1e8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="singerBigImageView" destination="MUE-Ts-xtj" id="QJ6-8b-aA5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2j3-9m-bb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="1221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mojiezuo.jpg" width="1024" height="768"/>
+    </resources>
+</document>
